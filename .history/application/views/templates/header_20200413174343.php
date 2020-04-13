@@ -22,7 +22,7 @@
           <a class="nav-link" href="<?php echo base_url(); ?>/about">Sobre Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url(); ?>/news">Noticias</a>
+          <a class="nav-link" href="<?php echo base_url(); ?>/about">Sobre Nosotros</a>
         </li>
       </ul>
     </div>
