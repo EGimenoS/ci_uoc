@@ -18,9 +18,6 @@ class News extends CI_Controller
       show_404();
     }
 
-    $data['title'] = $data['new']['titulo'];
-    $this->load->view('templates/header');
-    $this->load->view('news/view', $data);
-    $this->load->view('templates/footer');
+    $data['title'] = $data['new']['titulo']
   }
 }

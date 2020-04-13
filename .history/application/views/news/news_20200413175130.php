@@ -5,5 +5,5 @@
     <small class="noticia-date">Creado en: <?php echo $new['fecha']; ?> por: <?php echo $new['autor']; ?></small>
     <p class="mt-2"><?php echo $new['contenido']; ?></p>
   </div>
-  <p><a class="btn btn-primary" href="<?php echo site_url('/news/' . $new['slug']); ?>">Leer más</a></p>
+  <p><a class="btn btn-default" href="<?php echo site_url('/posts/' . $post['slug']); ?>">Read More</a></p>
 <?php endforeach; ?>
