@@ -19,10 +19,8 @@
           <a class="nav-link" href="<?php echo base_url(); ?>">Inicio <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url(); ?>/about">Sobre Nosotros</a>
+          <a class="nav-link" href="<?php echo base_url(); ?>/about">Spobre Nosotros</a>
         </li>
       </ul>
     </div>
   </nav>
-
-  <div class="container">
