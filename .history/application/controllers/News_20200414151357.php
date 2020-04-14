@@ -15,7 +15,7 @@ class News extends CI_Controller
   {
     $data['new'] = $this->news_model->get_news($slug);
     $new_id = $data['new']['id'];
-    $data['categories'] = $this->category_model->get_categories($new_id);
+    $data['categories'] = $this->category_model->get_categories($new_id)
     if (empty($data['new'])) {
       show_404();
     }
