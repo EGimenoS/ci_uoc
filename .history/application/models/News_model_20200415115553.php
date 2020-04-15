@@ -37,7 +37,6 @@ class News_model extends CI_Model
     $this->db->select('titulo, noticias.id, fecha');
     $this->db->from('noticias');
     $this->db->join('categorias', 'noticias.id = categorias.noticia_id');
-    $this->db->where('nombre', $category);
     $query = $this->db->get();
     return $query->result_array();
   }

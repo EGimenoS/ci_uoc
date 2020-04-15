@@ -46,17 +46,5 @@ class Api extends RestController
 
   public function categories_get()
   {
-    $category = $this->get('category');
-    $news = $this->news_model->get_news_by_category($category);
-    if ($news) {
-      // Set the response and exit
-      $this->response($news, 200);
-    } else {
-      // Set the response and exit
-      $this->response([
-        'status' => false,
-        'message' => 'No  se encontraron noticias para el id de categoría dado'
-      ], 404);
-    }
   }
 }

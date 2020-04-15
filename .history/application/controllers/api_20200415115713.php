@@ -46,8 +46,8 @@ class Api extends RestController
 
   public function categories_get()
   {
-    $category = $this->get('category');
-    $news = $this->news_model->get_news_by_category($category);
+    $id = $this->get('id');
+    $news = $this->news_model->get_news_by_category($id);
     if ($news) {
       // Set the response and exit
       $this->response($news, 200);

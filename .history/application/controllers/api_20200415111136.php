@@ -32,7 +32,7 @@ class Api extends RestController
         ], 404);
       }
     } else {
-      $new = $this->news_model->get_news_for_api($id);
+      $new = $this->news_model->get_news_for_api();
       if ($new) {
         $this->response($new, 200);
       } else {
@@ -41,22 +41,6 @@ class Api extends RestController
           'message' => 'No se encuentra la noticia con el id solicitado'
         ], 404);
       }
-    }
-  }
-
-  public function categories_get()
-  {
-    $category = $this->get('category');
-    $news = $this->news_model->get_news_by_category($category);
-    if ($news) {
-      // Set the response and exit
-      $this->response($news, 200);
-    } else {
-      // Set the response and exit
-      $this->response([
-        'status' => false,
-        'message' => 'No  se encontraron noticias para el id de categoría dado'
-      ], 404);
     }
   }
 }

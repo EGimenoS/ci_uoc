@@ -19,7 +19,7 @@ class News_model extends CI_Model
 
   public function get_news_for_api($id = FALSE, $page = FALSE)
   {
-    $limit = 10;
+    $limit = 3;
     $offset = $page * $limit;
     if ($id === FALSE) {
       $this->db->select('titulo, id, fecha');
@@ -29,16 +29,5 @@ class News_model extends CI_Model
 
     $query = $this->db->get_where('noticias', array('id' => $id));
     return $query->row_array();
-  }
-
-  public function get_news_by_category($category = FALSE)
-  {
-    $this->db->distinct();
-    $this->db->select('titulo, noticias.id, fecha');
-    $this->db->from('noticias');
-    $this->db->join('categorias', 'noticias.id = categorias.noticia_id');
-    $this->db->where('nombre', $category);
-    $query = $this->db->get();
-    return $query->result_array();
   }
 }
